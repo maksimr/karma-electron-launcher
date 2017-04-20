@@ -27,6 +27,15 @@ module.exports = function(config) {
   config.set({
     browsers: ['Electron', 'Electron_without_security'],
 
+    electron: {
+      browserWindow: {
+        show: false,
+        webPreferences: {
+          nodeIntegration: false
+        }
+      }
+    },
+
     // you can define custom flags
     customLaunchers: {
       Electron_without_security: {

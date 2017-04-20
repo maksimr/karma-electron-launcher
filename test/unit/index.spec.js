@@ -13,7 +13,7 @@ describe('launcher', function () {
   beforeEach(function () {
     baseBrowserDecorator = sinon.spy()
     args = {}
-    launcher = new ElectronLauncher(baseBrowserDecorator, args)
+    launcher = new ElectronLauncher(baseBrowserDecorator, args, {})
   })
 
   afterEach(function () {
