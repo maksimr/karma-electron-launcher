@@ -16,7 +16,7 @@ The easiest way is to keep `karma-electron-launcher` as a devDependency in your 
 by running
 
 ```bash
-$ npm install karma-electron-launcher --save-dev
+$ npm install @maksimr/karma-electron-launcher --save-dev
 ```
 
 ## Configuration
@@ -58,6 +58,22 @@ $ karma start --browsers Electron
 ```
 
 ----
+
+
+### Require
+
+Now Electron [does not support require](https://github.com/electron/electron/pull/9095) over http/https out of the box so if you want use require inside
+your tests you should use following configuration:
+
+```js
+    frameworks: ['mocha', 'electron-module-patch'],
+    client: {
+      useIframe: false,
+      runInParent: true
+    },
+    browsers: ['Electron']
+```
+
 
 For more information on Karma see the [homepage].
 
