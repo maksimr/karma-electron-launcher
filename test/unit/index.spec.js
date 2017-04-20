@@ -4,7 +4,7 @@
 var expect = require('chai').expect
 var sinon = require('sinon').sandbox.create()
 var ElectronLauncher = require('../../index')['launcher:Electron'][1]
-var ElectronFramework = require('../../index')['framework:electron-module-patch'][1]
+var ElectronFramework = require('../../index')['framework:electron-nodeIntegration'][1]
 
 describe('launcher', function () {
   var launcher

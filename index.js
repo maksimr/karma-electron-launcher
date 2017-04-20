@@ -31,7 +31,7 @@ ElectronBrowser.prototype = {
 
 module.exports = {
   'launcher:Electron': ['type', ElectronBrowser],
-  'framework:electron-module-patch': ['type', function (config) {
+  'framework:electron-nodeIntegration': ['type', function (config) {
     var path = require('path')
 
     process.env.NODE_PATH = [

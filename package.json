@@ -1,6 +1,6 @@
 {
   "name": "@maksimr/karma-electron-launcher",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "A Karma plugin. Launcher for Electron.",
   "main": "index.js",
   "scripts": {

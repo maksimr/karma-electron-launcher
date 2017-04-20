@@ -2,7 +2,7 @@ module.exports = function (config) {
   config.set({
     basePath: '',
 
-    frameworks: ['mocha', 'electron-module-patch'],
+    frameworks: ['mocha', 'electron-nodeIntegration'],
 
     files: [
       '**/*.spec.js'
@@ -27,11 +27,6 @@ module.exports = function (config) {
     autoWatch: true,
 
     browsers: ['Electron'],
-
-    client: {
-      useIframe: false,
-      runInParent: true
-    },
 
     singleRun: true,
 

@@ -66,11 +66,7 @@ Now Electron [does not support require](https://github.com/electron/electron/pul
 your tests you should use following configuration:
 
 ```js
-    frameworks: ['mocha', 'electron-module-patch'],
-    client: {
-      useIframe: false,
-      runInParent: true
-    },
+    frameworks: ['mocha', 'electron-nodeIntegration'],
     browsers: ['Electron']
 ```
 
