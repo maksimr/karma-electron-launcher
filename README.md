@@ -66,9 +66,14 @@ Now Electron [does not support require](https://github.com/electron/electron/pul
 your tests you should use following configuration:
 
 ```js
-    frameworks: ['mocha', 'electron-nodeIntegration'],
+    frameworks: ['electron-nodeIntegration', 'mocha'],
     browsers: ['Electron']
 ```
+
+Be carefully first of all **you should load** electron-nodeIntegration **after** mocha/jasmine because the should be initialized
+on *window* object not on the *global* object.
+Also, if you run tests in iframe be carefully because global object does not cleaned between reloads,
+you can use karma option *client.useIframe* and *client.runInParent* if you want run tests in main window.
 
 
 For more information on Karma see the [homepage].

@@ -2,7 +2,7 @@ module.exports = function (config) {
   config.set({
     basePath: '',
 
-    frameworks: ['mocha', 'electron-nodeIntegration'],
+    frameworks: ['electron-nodeIntegration', 'mocha'],
 
     files: [
       '**/*.spec.js'
